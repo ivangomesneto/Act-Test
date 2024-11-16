@@ -1,4 +1,9 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using CashFlow.WebApi.Handlers.Transactions.AddTransactionEntry;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
+using MySqlX.XDevAPI;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Diagnostics;
 using System.Reflection;
 
@@ -29,6 +34,8 @@ namespace CashFlow.WebApi.Configurations
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 s.IncludeXmlComments(xmlPath);
+
+                s.SchemaFilter<ExampleSchemaFilter>();
             });
 
             return services;
@@ -45,6 +52,29 @@ namespace CashFlow.WebApi.Configurations
             });
 
             return app;
+        }
+    }
+
+    public class ExampleSchemaFilter : ISchemaFilter
+    {
+        public void Apply(OpenApiSchema schema, SchemaFilterContext context)
+        {
+            var setDefaultExample = new Action<string, string>((propertyName, example) =>
+            {
+                foreach (var property in schema.Properties)
+                {
+                    if (string.Equals(property.Key, propertyName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        property.Value.Example = new OpenApiString(example);
+                    }
+                }
+            });
+
+
+            if (context.Type == typeof(AddTransactionEntryRequest))
+            {
+                setDefaultExample("TransactionTypeId", "initialbalance | credit | debit");
+            }
         }
     }
 }

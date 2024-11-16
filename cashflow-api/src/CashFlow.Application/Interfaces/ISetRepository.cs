@@ -2,7 +2,7 @@
 {
     public interface ISetRepository<T, C> where T : class
     {
-        Task Insert(T entidade);
+        Task<T> Insert(T entidade);
         Task Update(T entidade);
         Task Delete(C id);
     }

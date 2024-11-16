@@ -32,10 +32,12 @@ namespace CashFlow.Infrastructure.Database.Repositories
             return Task.FromResult(query);
         }
 
-        public async Task Insert(T entidade)
+        public async Task<T> Insert(T entidade)
         {
             await _context.Set<T>().AddAsync(entidade);
             await Save();
+
+            return entidade;
         }
 
         public virtual async Task Update(T entidade)

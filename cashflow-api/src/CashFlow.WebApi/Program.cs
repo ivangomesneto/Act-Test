@@ -35,7 +35,7 @@ builder.Services.AddLoggingConfig();
 
 var app = builder.Build();
 
-//app.UseMigrationsConfig();
+app.UseMigrationsConfig();
 app.UseSwaggerConfig();
 app.UseMiddleware<CustomHttpContextMiddleware>();
 app.UseLogRequestLoggingConfig();
