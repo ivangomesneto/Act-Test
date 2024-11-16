@@ -14,4 +14,9 @@
     <ProjectReference Include="..\CashFlow.Domain\CashFlow.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="UseCases\" />
+  </ItemGroup>
+
 </Project>

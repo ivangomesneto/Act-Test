@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using CashFlow.Domain.Exceptions;
 
 namespace CashFlow.WebApi.Middlewares
 {
@@ -28,7 +29,7 @@ namespace CashFlow.WebApi.Middlewares
         {
             var statusCode = exception switch
             {
-                //BusinessException => (int)HttpStatusCode.BadRequest,
+                BusinessException => (int)HttpStatusCode.BadRequest,
                 _ => (int)HttpStatusCode.InternalServerError,
             };
 
