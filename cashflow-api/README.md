@@ -1,33 +1,34 @@
 # **CashFlow.WebApi**
 
-Bem-vindo ‡ aplicaÁ„o **CashFlow.WebApi**. Este projeto utiliza Docker Compose para execuÁ„o e inclui funcionalidades como conex„o a um banco de dados MySQL e gravaÁ„o de logs em arquivos locais.
+Bem-vindo √† aplica√ß√£o **CashFlow.WebApi**. Este projeto utiliza Docker Compose para execu√ß√£o e inclui funcionalidades como conex√£o a um banco de dados MySQL e grava√ß√£o de logs em arquivos locais.
 
 ---
 
-## **Antes de Executar a AplicaÁ„o**
+## **Antes de Executar a Aplica√ß√£o**
 
-… necess·rio que o docker esteja rodando na m·quina que executar· a aplicaÁ„o
+√â necess√°rio que o docker esteja rodando na m√°quina que executar√° a aplica√ß√£o
 
+---
 
-## **Executando a AplicaÁ„o**
+## **Executando a Aplica√ß√£o**
 
 ### **Passos para Iniciar**
-1. **Selecionar o perfil de inicializaÁ„o**:
+1. **Selecionar o perfil de inicializa√ß√£o**:
    - No Visual Studio, selecione o perfil **docker-compose**.
-2. **Iniciar a aplicaÁ„o**:
+2. **Iniciar a aplica√ß√£o**:
    - Pressione **F5** para compilar e executar o projeto.
-3. **Acessar a documentaÁ„o Swagger**:
-   - Se o navegador n„o abrir automaticamente apÛs a inicializaÁ„o, acesse manualmente a URL:
+3. **Acessar a documenta√ß√£o Swagger**:
+   - Se o navegador n√£o abrir automaticamente ap√≥s a inicializa√ß√£o, acesse manualmente a URL:
      ```
      https://localhost:61701/swagger/index.html
      ```
 
 ---
 
-## **ConfiguraÁıes da AplicaÁ„o**
+## **Configura√ß√µes da Aplica√ß√£o**
 
-### **Conex„o com o Banco de Dados**
-- A string de conex„o do banco MySQL est· localizada no arquivo `appsettings.json`:
+### **Conex√£o com o Banco de Dados**
+- A string de conex√£o do banco MySQL est√° localizada no arquivo `appsettings.json`:
   ```json
   "PersistenceModule": {
       "MySQLConnection": "SuaStringDeConexaoAqui"
@@ -36,24 +37,28 @@ Bem-vindo ‡ aplicaÁ„o **CashFlow.WebApi**. Este projeto utiliza Docker Compose p
 Substitua "SuaStringDeConexaoAqui" pelos valores corretos para conectar-se ao seu banco.
 
 ### **Logs**
-- Os logs da aplicaÁ„o s„o gravados localmente na pasta Logs do projeto.
-- Divis„o dos Logs:
-    - Logs gerais: ContÍm informaÁıes gerais da aplicaÁ„o.
-    - Logs de erros: Registros detalhados de erros ocorridos durante a execuÁ„o.
-    - Logs de banco: Detalham as interaÁıes com o banco de dados.
+- Os logs da aplica√ß√£o s√£o gravados localmente na pasta Logs do projeto.
+- Divis√£o dos Logs:
+    - Logs gerais: Cont√™m informa√ß√µes gerais da aplica√ß√£o.
+    - Logs de erros: Registros detalhados de erros ocorridos durante a execu√ß√£o.
+    - Logs de banco: Detalham as intera√ß√µes com o banco de dados.
+
+---
 
 ### **Tecnologias Utilizadas**
-- Docker Compose: Para orquestraÁ„o de containers.
-- Swagger: DocumentaÁ„o e teste de APIs.
-- Entity Framework Core: ORM para comunicaÁ„o com o banco de dados.
+- Docker Compose: Para orquestra√ß√£o de containers.
+- Swagger: Documenta√ß√£o e teste de APIs.
+- Entity Framework Core: ORM para comunica√ß√£o com o banco de dados.
 - MySQL: Banco de dados relacional.
-- Serilog: Biblioteca para geraÁ„o de logs estruturados.
+- Serilog: Biblioteca para gera√ß√£o de logs estruturados.
+
+---
 
 ### **Ambiente de Desenvolvimento**
 - URL Local:
     - Swagger: https://localhost:61701/swagger/index.html
 
 - Logs:
-    - DiretÛrio: Logs/
+    - Diret√≥rio: Logs/
 
-Certifique-se de que todas as dependÍncias (como Docker, MySQL e Visual Studio) est„o corretamente configuradas no ambiente local antes de iniciar o projeto.
+Certifique-se de que todas as depend√™ncias (como Docker, MySQL e Visual Studio) est√£o corretamente configuradas no ambiente local antes de iniciar o projeto.
