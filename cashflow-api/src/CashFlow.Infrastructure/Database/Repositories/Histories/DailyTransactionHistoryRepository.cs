@@ -1,8 +1,8 @@
-﻿using CashFlow.Application.Interfaces.Transactions;
-using CashFlow.Domain.Entities.Transactions;
+﻿using CashFlow.Application.Interfaces.Histories;
+using CashFlow.Domain.Entities.Histories;
 using Microsoft.EntityFrameworkCore;
 
-namespace CashFlow.Infrastructure.Database.Repositories.Transactions
+namespace CashFlow.Infrastructure.Database.Repositories.Histories
 {
     public class DailyTransactionHistoryRepository(DbContext context) : BaseRepository<DailyTransactionHistory, Guid>(context), IDailyTransactionHistoryRepository
     {

@@ -1,4 +1,4 @@
-﻿using CashFlow.Application.UseCases.AddTransactionEntry;
+﻿using CashFlow.Application.UseCases.Transactions.AddTransactionEntry;
 
 namespace CashFlow.WebApi.Handlers.Transactions.AddTransactionEntry
 {

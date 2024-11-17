@@ -1,6 +1,6 @@
 ﻿using CashFlow.Domain.Entities.Transactions;
 
-namespace CashFlow.Application.UseCases.AddTransactionEntry
+namespace CashFlow.Application.UseCases.Transactions.AddTransactionEntry
 {
     public interface IAddTransactionEntryUseCase
     {

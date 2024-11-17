@@ -1,4 +1,6 @@
-﻿using CashFlow.Infrastructure.Database.Configurations;
+﻿using CashFlow.Infrastructure.Database.Configurations.Histories;
+using CashFlow.Infrastructure.Database.Configurations.Transactions;
+using CashFlow.Infrastructure.Database.Configurations.Types;
 using Microsoft.EntityFrameworkCore;
 
 namespace CashFlow.Infrastructure.Database.DataAccess
@@ -12,8 +14,11 @@ namespace CashFlow.Infrastructure.Database.DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region [ Transactions ]
-            modelBuilder.ApplyConfiguration(new DailyTransactionHistoryConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionEntryConfiguration());
+            #endregion
+
+            #region [ Histories ]
+            modelBuilder.ApplyConfiguration(new DailyTransactionHistoryConfiguration());
             #endregion
 
             #region [ Types ]

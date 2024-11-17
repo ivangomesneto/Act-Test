@@ -1,4 +1,6 @@
-﻿using CashFlow.WebApi.Handlers.Transactions.AddTransactionEntry;
+﻿using CashFlow.WebApi.Handlers.Histories.GenerateDailyTransactionHistory;
+using CashFlow.WebApi.Handlers.Histories.GetAllDailyTransactionHistories;
+using CashFlow.WebApi.Handlers.Transactions.AddTransactionEntry;
 using CashFlow.WebApi.Handlers.Transactions.DeleteTransactionEntry;
 using CashFlow.WebApi.Handlers.Transactions.GetAllTransactionEntries;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +28,7 @@ namespace CashFlow.WebApi.Configurations
 
             app.MapPost("transactions",
             [SwaggerOperation(Summary = "Add a new transaction entry")]
-            [ProducesResponseType(StatusCodes.Status201Created)]
+            [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddTransactionEntryResponse))]
             (IAddTransactionEntryHandler handler, [FromBody] AddTransactionEntryRequest request) =>
             {
                 return handler.AddTransactionEntry(request);
@@ -47,6 +49,26 @@ namespace CashFlow.WebApi.Configurations
             {
                 return handler.GetTransactionEntries(date, typeTransactionId);
             }).WithTags("Transactions").AllowAnonymous().WithOpenApi();
+
+            #endregion
+
+            #region [ Histories ]
+
+            app.MapPost("summaries",
+            [SwaggerOperation(Summary = "Generate a daily transactions summary")]
+            [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(GenerateDailyTransactionHistoryResponse))]
+            (IGenerateDailyTransactionHistoryHandler handler, [FromBody] GenerateDailyTransactionHistoryRequest request) =>
+            {
+                return handler.GenerateDailyTransactionHistory(request);
+            }).WithTags("Summaries").AllowAnonymous().WithOpenApi();
+
+            app.MapGet("summaries",
+            [SwaggerOperation(Summary = "Get all daily transactions summary")]
+            [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetAllTransactionEntriesResponse))]
+            (IGetAllDailyTransactionHistoriesHandler handler, [FromQuery] DateTime? date = null) =>
+            {
+                return handler.GetAllDailyTransactionHistories(date);
+            }).WithTags("Summaries").AllowAnonymous().WithOpenApi();
 
             #endregion
         }

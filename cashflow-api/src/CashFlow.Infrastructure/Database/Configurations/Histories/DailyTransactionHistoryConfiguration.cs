@@ -1,8 +1,8 @@
-﻿using CashFlow.Domain.Entities.Transactions;
+﻿using CashFlow.Domain.Entities.Histories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CashFlow.Infrastructure.Database.Configurations
+namespace CashFlow.Infrastructure.Database.Configurations.Histories
 {
     public class DailyTransactionHistoryConfiguration : IEntityTypeConfiguration<DailyTransactionHistory>
     {

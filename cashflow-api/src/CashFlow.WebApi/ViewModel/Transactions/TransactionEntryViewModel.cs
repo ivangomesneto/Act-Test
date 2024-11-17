@@ -9,6 +9,6 @@ namespace CashFlow.WebApi.ViewModel.Transactions
         public string TransactionTypeId { get; set; } = transactionEntry.TransactionTypeId;
         public string? TransactionType { get; set; } = transactionEntry.TransactionType?.Name;
         public string Description { get; set; } = transactionEntry.Description;
-        public string Amount { get; set; } = $"R$ {transactionEntry.Amount.ToString("0.00")}";
+        public string Amount { get; set; } = $"R$ {transactionEntry.Amount:0.00}";
     }
 }

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CashFlow.Infrastructure.Database.Configurations
+namespace CashFlow.Infrastructure.Database.Configurations.Transactions
 {
     public class TransactionEntryConfiguration : IEntityTypeConfiguration<TransactionEntry>
     {

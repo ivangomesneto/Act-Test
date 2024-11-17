@@ -1,4 +1,4 @@
-﻿using CashFlow.Application.UseCases.DeleteTransactionEntry;
+﻿using CashFlow.Application.UseCases.Transactions.DeleteTransactionEntry;
 
 namespace CashFlow.WebApi.Handlers.Transactions.DeleteTransactionEntry
 {

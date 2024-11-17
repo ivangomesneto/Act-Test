@@ -1,6 +1,6 @@
-﻿using CashFlow.Domain.Entities.Transactions;
+﻿using CashFlow.Domain.Entities.Histories;
 
-namespace CashFlow.Application.Interfaces.Transactions
+namespace CashFlow.Application.Interfaces.Histories
 {
     public interface IDailyTransactionHistoryRepository : IGetRepository<DailyTransactionHistory, Guid>, ISetRepository<DailyTransactionHistory, Guid>
     {

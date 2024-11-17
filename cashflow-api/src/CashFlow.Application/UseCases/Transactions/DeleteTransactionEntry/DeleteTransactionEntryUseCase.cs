@@ -1,7 +1,7 @@
 ﻿using CashFlow.Application.Interfaces.Transactions;
 using CashFlow.Domain.Exceptions;
 
-namespace CashFlow.Application.UseCases.DeleteTransactionEntry
+namespace CashFlow.Application.UseCases.Transactions.DeleteTransactionEntry
 {
     public class DeleteTransactionEntryUseCase : IDeleteTransactionEntryUseCase
     {

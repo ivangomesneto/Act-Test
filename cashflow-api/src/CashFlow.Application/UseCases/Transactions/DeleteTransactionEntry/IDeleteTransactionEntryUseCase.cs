@@ -1,4 +1,4 @@
-﻿namespace CashFlow.Application.UseCases.DeleteTransactionEntry
+﻿namespace CashFlow.Application.UseCases.Transactions.DeleteTransactionEntry
 {
     public interface IDeleteTransactionEntryUseCase
     {

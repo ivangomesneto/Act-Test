@@ -1,4 +1,4 @@
-﻿using CashFlow.Application.UseCases.GetAllTransactionEntries;
+﻿using CashFlow.Application.UseCases.Transactions.GetAllTransactionEntries;
 
 namespace CashFlow.WebApi.Handlers.Transactions.GetAllTransactionEntries
 {

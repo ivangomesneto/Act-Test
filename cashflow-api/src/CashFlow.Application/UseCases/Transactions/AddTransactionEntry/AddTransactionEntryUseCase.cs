@@ -2,7 +2,7 @@
 using CashFlow.Domain.Entities.Transactions;
 using CashFlow.Domain.Exceptions;
 
-namespace CashFlow.Application.UseCases.AddTransactionEntry
+namespace CashFlow.Application.UseCases.Transactions.AddTransactionEntry
 {
     public class AddTransactionEntryUseCase : IAddTransactionEntryUseCase
     {
