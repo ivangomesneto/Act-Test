@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{53F7D4
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3FE56F76-3A83-4334-9D9C-D933E7A38E74}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{782FB50F-D329-4AE2-A10D-DEA7D127A98B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Test", "tst\CashFlow.Test\CashFlow.Test.csproj", "{50A30FE8-F307-49CC-82B7-27130DF1D18A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{3FE56F76-3A83-4334-9D9C-D933E7A38E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE56F76-3A83-4334-9D9C-D933E7A38E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE56F76-3A83-4334-9D9C-D933E7A38E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A30FE8-F307-49CC-82B7-27130DF1D18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A30FE8-F307-49CC-82B7-27130DF1D18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A30FE8-F307-49CC-82B7-27130DF1D18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A30FE8-F307-49CC-82B7-27130DF1D18A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,7 @@ Global
 		{790309CD-3BF1-4A28-97DF-573DB5837759} = {2277D5F0-A8A3-4506-9B9E-907E09B6FA6E}
 		{3700DEE2-312E-42B2-9E9B-37A11E6F1051} = {C4EB622F-3560-41FC-B53A-05EC7A8281E9}
 		{E9AD01F4-F798-4395-A16D-A9363A818866} = {53F7D467-8AFF-421A-A810-162EEFA2C59E}
+		{50A30FE8-F307-49CC-82B7-27130DF1D18A} = {782FB50F-D329-4AE2-A10D-DEA7D127A98B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14811B63-1E88-44AA-B693-4B235BE5D8CA}
